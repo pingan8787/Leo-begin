@@ -1,0 +1,35 @@
+@media (min-width: 1200px) {
+    .contfull {
+        width: 1271px;
+    }
+}
+@media (min-width:992px) and (max-width:1199px){
+    .contfull {
+        width: 1150px;
+    }
+
+}
+@media (min-width:768px) and (max-width:991px){
+    .contfull {
+        width: 928px;
+    }
+    .home-text{
+        display: none;
+    }
+}
+@media (max-width:767px){
+    #clients-carousel .carousel-inner img {
+        width: 100%;
+    }
+    #clients .serv-text>h1,.home-img h1,.about-text h1 {
+        font-size: 30px;
+    }
+    .home-text{
+        display: none;
+    }
+}
+@media (max-width:479px){
+    .home-text{
+        display: none;
+    }
+}

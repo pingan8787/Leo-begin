@@ -1,0 +1,9 @@
+CREATE TABLE lithe_msg(
+    mid INT PRIMARY KEY AUTO_INCREMENT,
+    Yname VARCHAR(64),
+    Yphone VARCHAR(32),
+    Ydate VARCHAR(512)
+);
+INSERT INTO lithe_msg VALUES
+(NULL,'Leo','1234567','2016-08-11'),
+(NULL,'Mary','987654321','2016-10-06');

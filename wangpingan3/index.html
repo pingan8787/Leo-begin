@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>himu 一个充满创意的团队</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/index.css"/>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--响应式导航条-->
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="navcont">
+        <div class="navbar-header">
+            <a class="navbar-brand"  href="#">
+                <span>
+                    <img src="images/logo.png"  class="img-responsive" />
+                </span>
+            </a>
+            <a class="navbar-toggle" data-toggle="collapse" href="#menu">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+        </div>
+        <div id="menu" class="collapse navbar-collapse">
+            <ul class="menunav nav navbar-nav navbar-right ">
+                <li class="menunav"><a href="#home">首页</a></li>
+                <li class="menunav"><a href="#about">关于</a></li>
+                <li class="menunav"><a href="#services">服务</a></li>
+                <li class="menunav"><a href="#team">团队</a></li>
+                <li class="menunav"><a href="#portfolio">投资</a></li>
+                <li class="menunav"><a href="#clients">客户</a></li>
+                <li class="menunav"><a href="#blog">博客</a></li>
+                <li class="menunav menunav0"><a href="#contact">联系</a></li>
+                <li class="ari" type="button" data-toggle="modal" data-target="#modal-rigest"><a href="#">注册</a></li>
+                <li class="bri" type="button" data-toggle="modal" data-target="#modal-login"><a href="#">登录</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--主题内容-->
+<div class="main">
+    <div class="contfull">
+        <!-- 第一部分 HOME 轮播图-->
+        <div id="home" class="row">
+            <div class="home-img col-xs-12">
+                <div id="carousel-example-generic" class="carousel slide " data-ride="carousel" data-interval="2000" data-pause="none">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="images/slider/slide1.jpg" alt="...">
+                            <div class="home-text carousel-caption">
+                                <h1>'HIMU' ONEPAGE HTML TEMPLATE</h1>
+                                <p>Fully Professional one page template</p>
+                                <a href="#" class="btn">GET STARTED</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="images/slider/slide2.jpg" alt="...">
+                            <div class="home-text carousel-caption">
+                                <h1>'HIMU' ONEPAGE HTML TEMPLATE</h1>
+                                <p>Fully Professional one page template</p>
+                                <a href="#" class="btn">GET STARTED</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="images/slider/slide3.jpg" alt="...">
+                            <div class="home-text carousel-caption">
+                                <h1>'HIMU' ONEPAGE HTML TEMPLATE</h1>
+                                <p>Fully Professional one page template</p>
+                                <a href="#" class="btn">GET STARTED</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <!-- 第二部分 ABOUT 关于-->
+        <div id="about">
+            <div class="row">
+                <!--第一行文字内容-->
+                <div class="about-text text-center col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h1>WHY WITH US?</h1>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <div class="row">
+                <!--左侧标签页-->
+                <div class="col-md-6 col-xs-12">
+                    <h3>WHY WITH US?</h3>
+                    <div role="tabpanel">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#Abouts" aria-controls="Abouts" role="tab" data-toggle="tab">Abouts</a></li>
+                            <li role="presentation"><a href="#Mission" aria-controls="Mission" role="tab" data-toggle="tab"><span></span>Mission</a></li>
+                            <li role="presentation"><a href="#Conmmunity" aria-controls="Conmmunity" role="tab" data-toggle="tab">Conmmunity</a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="Abouts">
+                                <div class="row tabpadding">
+                                    <div class=" col-xs-5">
+                                        <img class="imgpadding thumbnail img-responsive" src="images/about-us/about.jpg"/>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto culpa cumque deleniti eius, error, explicabo fugit hic in placeat quis sequi tenetur veritatis voluptate?</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="Mission">
+                                <div class="row tabpadding">
+                                    <div class=" col-xs-5">
+                                        <img class="imgpadding thumbnail img-responsive" src="images/about-us/community.jpg"/>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto culpa cumque deleniti eius, error, explicabo fugit hic in placeat quis sequi tenetur veritatis voluptate?</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="Conmmunity">
+                                <div class="row tabpadding">
+                                    <div class=" col-xs-5">
+                                        <img class="imgpadding thumbnail img-responsive" src="images/about-us/mission.jpg"/>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto culpa cumque deleniti eius, error, explicabo fugit hic in placeat quis sequi tenetur veritatis voluptate?</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--右侧图表页-->
+                <div class="col-md-6 col-xs-12">
+                    <h3>OUR SKILLS</h3>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                            <span class="text-left prog-text">HTML5 & CSS3</span>
+                            <span class="sr-only">90% HTML5 & CSS3</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+                            <span class="prog-text">jQuery、DOM、BOM</span>
+                            <span class="sr-only">85% jQuery、DOM、BOM</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                            <span class="prog-text">PHP、MySQL</span>
+                            <span class="sr-only">80% PHP、MySQL</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">
+                            <span class="prog-text">BootStrap、Angular、Node.Js</span>
+                            <span class="sr-only">75% BootStrap、Angular、Node.Js</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                            <span class="prog-text">Git、微信开发</span>
+                            <span class="sr-only">70% Git、微信开发</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!--第三部分 services 服务  -->
+    <div id="services">
+        <div class="container">
+            <div class="row">
+                <!--第一行文字内容-->
+                <div class="serv-text text-center col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-12">
+                             <h1>SERVICES</h1>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam consectetur, deserunt ducimus est exercitationem id ipsam iste molestias mollitia nostrum nulla placeat quasi quod quos, reprehenderit tenetur? Quod, ut.</p>
+                </div>
+            </div>
+            <div class="row">
+                <!--第二行卡片页-->
+                <div class="col-sm-4 col-xs-12">
+                    <div class="serv-card thumbnail">
+                        <div class="icon-text text-center img-circle">
+                            <span class="fa fa-th"></span>
+                        </div>
+                        <div class="caption">
+                            <h2 class="text-center">Modern Design</h2>
+                            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, iure labore laboriosam officiis praesentium recusandae reiciendism.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <div class="serv-card thumbnail">
+                        <div class="icon-text text-center img-circle">
+                            <span class="fa fa-html5"></span>
+                        </div>
+                        <div class="caption">
+                            <h2 class="text-center">Web Development</h2>
+                            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, iure labore laboriosam officiis praesentium recusandae reiciendism.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <div class="serv-card thumbnail">
+                        <div class="icon-text text-center img-circle">
+                            <span class="fa fa-users"></span>
+                        </div>
+                        <div class="caption">
+                            <h2 class="text-center">Online Marketing</h2>
+                            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, iure labore laboriosam officiis praesentium recusandae reiciendism.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!--第四部分 team 团队-->
+    <div class="container">
+        <div id="team">
+            <div class="row">
+                <!--第一行文字内容-->
+                <div class="about-text text-center col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-12">
+                           <h1>MEET THE TEAM</h1>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet itaque molestiae officiis repellendus tenetur? Accusamus amet, aspernatur ea earum numquam optio rem temporibus voluptates? Earum facere quod sequi soluta vel.</p>
+                </div>
+            </div>
+            <div class="row">
+                <!--第二行卡片页-->
+                <div class="col-md-3 col-xs-6">
+                    <div class="team-card text-center">
+                        <div>
+                            <img src="images/our-team/member1.jpg" class="img-rounded img-responsive"/>
+                        </div>
+                        <h3>William Hur</h3>
+                        <h4>Sr. Web Developer</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>
+                        <div class="tubiao">
+                            <a><span class="fa fa-facebook"></span></a>
+                            <a><span class="fa fa-twitter"></span></a>
+                            <a><span class="fa fa-google-plus"></span></a>
+                            <a><span class="fa fa-dribbble"></span></a>
+                            <a><span class="fa fa-linkedin"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <div class="team-card text-center">
+                        <div>
+                            <img src="images/our-team/member2.jpg" class="img-rounded img-responsive"/>
+                        </div>
+                        <h3>Alekjandra Jony</h3>
+                        <h4>Creative Designer</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>
+                        <div class="tubiao">
+                            <a><span class="fa fa-facebook"></span></a>
+                            <a><span class="fa fa-twitter"></span></a>
+                            <a><span class="fa fa-google-plus"></span></a>
+                            <a><span class="fa fa-dribbble"></span></a>
+                            <a><span class="fa fa-linkedin"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <div class="team-card text-center">
+                        <div>
+                            <img src="images/our-team/member3.jpg" class="img-rounded img-responsive"/>
+                        </div>
+                        <h3>Paul Johnson</h3>
+                        <h4>Skilled Programmer</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>
+                        <div class="tubiao">
+                            <a><span class="fa fa-facebook"></span></a>
+                            <a><span class="fa fa-twitter"></span></a>
+                            <a><span class="fa fa-google-plus"></span></a>
+                            <a><span class="fa fa-dribbble"></span></a>
+                            <a><span class="fa fa-linkedin"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <div class="team-card text-center">
+                        <div>
+                            <img src="images/our-team/member4.jpg" class="img-rounded img-responsive"/>
+                        </div>
+                        <h3>John Richerds</h3>
+                        <h4>Marketing Officer</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>
+                        <div class="tubiao">
+                            <a><span class="fa fa-facebook"></span></a>
+                            <a><span class="fa fa-twitter"></span></a>
+                            <a><span class="fa fa-google-plus"></span></a>
+                            <a><span class="fa fa-dribbble"></span></a>
+                            <a><span class="fa fa-linkedin"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--第五部分 portfolio 投资-->
+        <div id="portfolio">
+            <div class="row">
+                <!--第一行文字内容-->
+                <div class="about-text text-center col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-12">
+                             <h1>PORTFOLIO</h1>
+                         </div>
+                     </div>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.</p>
+                </div>
+            </div>
+            <div class="row">
+                <!--第二 标签页导航条-->
+                <div class="col-xs-12">
+                    <ul class="port-nav text-center">
+                        <li class="btn btn-default active"><a href="#">ALL</a></li>
+                        <li class="btn btn-default"><a href="#">HTML</a></li>
+                        <li class="btn btn-default"><a href="#">jQuery</a></li>
+                        <li class="btn btn-default"><a href="#">Bootstrap</a></li>
+                        <li class="btn btn-default"><a href="#">NodeJs</a></li>
+                        <li class="btn btn-default"><a href="#">Ajax</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <!--第三行 12张图片-->
+                <div class="port-img">
+                    <div class="col-sm-3 col-xs-4">
+                        <img src="images/portfolio/1.jpg" class="img-responsive"/>
+                    </div>
+                    <div class="col-sm-3 col-xs-4">
+                        <img src="images/portfolio/2.jpg" class="img-responsive"/>
+                    </div>
+                    <div class="col-sm-3 col-xs-4">
+                        <img src="images/portfolio/3.jpg" class="img-responsive"/>
+                    </div>
+                    <div class="col-sm-3 col-xs-4">
+                        <img src="images/portfolio/4.jpg" class="img-responsive"/>
+                    </div>
+                    <div class="col-sm-3 col-xs-4">
+                        <img src="images/portfolio/5.jpg" class="img-responsive"/>
+                    </div>
+                    <div class="col-sm-3 col-xs-4">
+                        <img src="images/portfolio/6.jpg" class="img-responsive"/>
+                    </div>
+                    <div class="col-sm-3 col-xs-4">
+                        <img src="images/portfolio/7.jpg" class="img-responsive"/>
+                    </div>
+                    <div class="col-sm-3 col-xs-4">
+                        <img src="images/portfolio/8.jpg" class="img-responsive"/>
+                    </div>
+                    <div class="col-sm-3 col-xs-4">
+                        <img src="images/portfolio/9.jpg" class="img-responsive"/>
+                    </div>
+                    <div class="col-sm-3 col-xs-4">
+                        <img src="images/portfolio/10.jpg" class="img-responsive"/>
+                    </div>
+                    <div class="col-sm-3 col-xs-4">
+                        <img src="images/portfolio/11.jpg" class="img-responsive"/>
+                    </div>
+                    <div class="col-sm-3 col-xs-4">
+                        <img src="images/portfolio/12.jpg" class="img-responsive"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!--第六部分 clients 客户-->
+    <div id="clients">
+        <div class="container">
+            <div class="row">
+                <!--第一行文字内容-->
+                <div class="serv-text text-center col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-12">
+                              <h1>CLIENTS SAY ABOUT US</h1>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+                </div>
+            </div>
+            <div class="row">
+                <!--第二行文字内容-->
+                <div class="col-xs-12">
+                    <div id="clients-carousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+                        <ol class="carousel-indicators">
+                            <li data-target="#clients-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#clients-carousel" data-slide-to="1"></li>
+                            <li data-target="#clients-carousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="single-client">
+                                    <div class="media">
+                                        <img src="images/clients/client2.jpg" class="pull-left"/>
+                                        <div class="media-body">
+                                            <div>
+                                                <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci commodi distinctio magni? Aspernatur, atque cumque delectus illum odit quos suscipit! Commodi, expedita id libero magnam mollitia quam ratione reiciendis voluptatibus!</h5>
+                                                <small>Someone famous in Source Title</small>
+                                                <br/>
+                                                <a href="">www.yourwebsite.com</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="single-client">
+                                    <div class="media">
+                                        <img src="images/clients/client3.jpg" class="pull-left"/>
+                                        <div class="media-body">
+                                            <div>
+                                                <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci commodi distinctio magni? Aspernatur, atque cumque delectus illum odit quos suscipit! Commodi, expedita id libero magnam mollitia quam ratione reiciendis voluptatibus!</h5>
+                                                <small>Someone famous in Source Title</small>
+                                                <br/>
+                                                <a href="">www.yourwebsite.com</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="single-client">
+                                    <div class="media">
+                                        <img src="images/clients/client1.jpg" class="pull-left"/>
+                                        <div class="media-body">
+                                            <div>
+                                                <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci commodi distinctio magni? Aspernatur, atque cumque delectus illum odit quos suscipit! Commodi, expedita id libero magnam mollitia quam ratione reiciendis voluptatibus!</h5>
+                                                <small>Someone famous in Source Title</small>
+                                                <br/>
+                                                <a href="">www.yourwebsite.com</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <!--第七部分 BLOG-->
+        <div id="blog">
+            <div class="row">
+                <div class="about-text text-center col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h1>OUR BLOG</h1>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, ipsum dolor sit amet, consectetuer adipiscing elit, ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="blog-card ">
+                        <img src="images/blog/1.jpg" alt="" class="img-responsive"/>
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                        <ul class="post-meta list-unstyled">
+                            <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> John</li>
+                            <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> Apr 15 2014</li>
+                        </ul>
+                        <div class="blog-content">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        </div>
+                        <a href="" class="blog-btn btn btn-primary">Read More</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="blog-card ">
+                        <img src="images/blog/2.jpg" alt="" class="img-responsive"/>
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                        <ul class="post-meta list-unstyled">
+                            <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> John</li>
+                            <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> Apr 15 2014</li>
+                        </ul>
+                        <div class="blog-content">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        </div>
+                        <a href="" class="blog-btn btn btn-primary">Read More</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="blog-card ">
+                        <img src="images/blog/3.jpg" alt="" class="img-responsive"/>
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                        <ul class="post-meta list-unstyled">
+                            <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> John</li>
+                            <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> Apr 15 2014</li>
+                        </ul>
+                        <div class="blog-content">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        </div>
+                        <a href="" class="blog-btn btn btn-primary">Read More</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="blog-card ">
+                        <img src="images/blog/1.jpg" alt="" class="img-responsive"/>
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                        <ul class="post-meta list-unstyled">
+                            <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> John</li>
+                            <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> Apr 15 2014</li>
+                        </ul>
+                        <div class="blog-content">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        </div>
+                        <a href="" class="blog-btn btn btn-primary">Read More</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="blog-card ">
+                        <img src="images/blog/3.jpg" alt="" class="img-responsive"/>
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                        <ul class="post-meta list-unstyled">
+                            <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> John</li>
+                            <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> Apr 15 2014</li>
+                        </ul>
+                        <div class="blog-content">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        </div>
+                        <a href="" class="blog-btn btn btn-primary">Read More</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="blog-card ">
+                        <img src="images/blog/2.jpg" alt="" class="img-responsive"/>
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                        <ul class="post-meta list-unstyled">
+                            <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> John</li>
+                            <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> Apr 15 2014</li>
+                        </ul>
+                        <div class="blog-content">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        </div>
+                        <a href="" class="blog-btn btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="about-text text-center col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-12">
+                             <h1>CONTACT WITH US</h1>
+                         </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div class="cont-left ">
+                        <div class="contact-address text-center">
+                            <address>
+                                <h2><span>Devs</span>Cluster</h2>
+                                <strong>36 North Kafrul<br>Dhaka Cantonment Area<br> Dhaka-1206, Bangladesh</strong><br>
+                                <small>( Lorem ipsum dolor sit amet, consectetuer adipiscing elit )</small>
+                            </address>
+                            <div class="social-icons">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-google-plus"></i>
+                                </a><a href="#"><i class="fa fa-dribbble"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="cont-right ">
+                        <h3 class="text-center">留言板</h3>
+                        <div class="form-sec">
+                            <form id="contact-form" class="contact" name="contact-form" method="post">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <input type="text" id="Yname" class="form-control name-field" required="required" placeholder="Your Name"></div>
+                                    <div class="col-xs-6">
+                                        <input type="email" id="Yemail" class="form-control mail-field" required="required" placeholder="Your Email">
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <textarea name="message" id="Mess" required="required" class="form-control" rows="5" placeholder="Message"></textarea>
+                                    </div>
+                                    <div class="text-center">
+                                        <button id="send" type="submit" class="cont-send btn btn-primary">Send</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
+<!--页尾-->
+<footer id="footer">
+    <div class="container">
+        <div class="text-center">
+            <p>Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://wangpingan2.applinzi.com">王平安</a></p>
+        </div>
+    </div>
+</footer>
+<!--登陆框-->
+<div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModallogin" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModallogin">请输入帐号密码</h4>
+            </div>
+            <div class="modal-body">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="myLoginName">您的帐号</label>
+                        <input name="uname" type="text" class="form-control" id="myLoginName" placeholder="请输入您的帐号">
+                    </div>
+                    <div class="form-group">
+                        <label for="myLoginPwd">您的密码</label>
+                        <input name="upwd" type="password" class="form-control" id="myLoginPwd" placeholder="请输入您的密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button id="user_login" type="button" class="btn btn-primary">登入</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--注册框-->
+<div class="modal fade" id="modal-rigest" tabindex="-1" role="dialog" aria-labelledby="myModalrigest" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalrigest">新用户注册</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="myRigestName">新的帐号</label>
+                        <input name="zname" type="text" class="form-control" id="myRigestName" placeholder="请输入您的帐号">
+                    </div>
+                    <div class="form-group">
+                        <label for="myRigestPwd">新的密码</label>
+                        <input name="zpwd" type="password" class="form-control" id="myRigestPwd" placeholder="请输入您的密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button id="user_rigest" type="button" class="btn btn-primary">注册</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

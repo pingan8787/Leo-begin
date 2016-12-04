@@ -1,0 +1,221 @@
+body{
+    background-color:#EEEEEE;
+    font-family: "Microsoft YaHei", "Hiragino Sans GB";
+    padding-bottom: 80px;
+    padding-top: 58px;
+}
+code{
+    background:#EEEEEE;
+    font-size: 14px;
+}
+.weui_cell{
+    padding:10px 15px;
+}
+
+/*顶部导航*/
+#nav-header{
+    background-color: #000000;
+    color:#FFFFFF;
+}
+.header-all{
+    margin:0 10px;
+}
+.header-msg{
+    width:100%;
+    height:18px;
+    overflow: hidden;
+    font-size: 0.6em;
+}
+.header-btn{
+    width:100%;
+    height:40px;
+    line-height: 40px;
+    font-size: 1.4em;
+}
+.header-btn span{
+    height:40px;
+    line-height: 40px;
+}
+.head-btn1{
+    font-size: 1em;
+}
+
+/*底部导航*/
+#nav-footer{
+    background-color: #fff;
+    color: #000000;
+    font-size: 0.4em;
+    border-top: 1px solid #aaaaaa;
+    height:70px;
+    text-align: center;
+    cursor: pointer;
+}
+.foot-div ul{
+    width:100%;
+    font-size: 12px;
+}
+.foot-div ul li{
+    list-style: none;
+    float: left;
+    padding:10px 0;
+    color: #666;
+}
+.foot-btn>div>img{
+    width: 28px;
+}
+/*底部导航激活样式*/
+.foot-bar-active{
+    color:#1AAD19;
+}
+/*我*/
+.pers-tools {
+}
+.weui_cell_hd img{
+    width: 30px;
+}
+.weui_cell_bd>p{
+    margin-bottom:0;
+}
+.me-main-img img,
+.me-main-header img{
+    width:60px;
+    border-radius: 5px;
+    border:1px solid #ddd;
+}
+.me-main-header img{
+    margin-right: 10px;
+}
+#me-detail:hover,
+.weui_cell_ft{
+    cursor: pointer;
+}
+/*** 消息页 ***/
+/** 个人中心 **/
+.erweima{
+    display: block;
+    width: 70%;
+    z-index: 10;
+    float: left;
+}
+#nav-header{
+    z-index: 20;
+}
+.me-main2{
+    margin-top: 20px;
+}
+#btn-return-1,
+#btn-return-2{
+    font-size: 0.6em;
+    cursor: pointer;
+}
+.erweima-d{
+    width:100%;
+    height:100%;
+    background: #111  ;
+}
+.erweima{
+    width: 70%;
+    position: absolute;
+    top:15%;
+    left:15%;
+}
+/** 登陆框 **/
+.we-dlk{
+    width:50%;
+    position: absolute;
+    top:35%;
+    left:25%;
+}
+.weui_input{
+    border: 1px solid #DDDDDD;
+    height: 2em;
+}
+
+/** mein  **/
+.swiper-container {
+    width: 100%;
+    height: 300px;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.mein-div{
+    position: relative;
+}
+.mein-img{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.mein-main{
+    margin-left:80px;
+}
+.mein-img img{
+    width:60px;
+    border-radius: 5px;
+    border:1px solid #ddd;
+}
+.mein-imgi{
+    position:relative;
+    width:27%;
+    height:0;
+    font-size:0;
+    line-height:0;
+    padding:0 0 27%;
+}
+.mein-imgi > img{
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+.weui-col-33{
+    margin-bottom:2%;
+}
+/*个人中心中的工作经历等*/
+.mein-main h6{
+    line-height: 18px;
+}
+.mein-main h4{
+    color: #337AB7;
+}
+/*项目展示*/
+.xmzs-img img{
+    width:100%;
+    padding:10px;
+    border: 1px solid #aaaaaa;
+    border-radius: 3px;
+}
+.xmzs-div{
+    margin:0 10px;
+}
+/*联系*/
+.relae{
+padding:0 20px;
+}
+.relae input{
+    border:1px solid transparent;
+    margin-top: 5px;;
+}
+.relae label{
+    margin-top: 5px;;
+}
