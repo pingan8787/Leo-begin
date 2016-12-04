@@ -1,0 +1,135 @@
+.header-nav ul li:hover{
+    background: #FC7700;
+    cursor: pointer;
+    -webkit-transition: background 1.5s;
+    -moz-transition: background 1.5s;
+    -ms-transition: background 1.5s;
+    -o-transition: background 1.5s;
+    transition: background 1.5s;
+}
+.header-nav ul li:hover a{
+    color: #ffffff;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -o-transition: color 0.5s;
+    transition: color 0.5s;
+}
+#home .home-img .home-text a{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+#home .home-img .home-text a:hover{
+    -webkit-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    -ms-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    transition: background 0.5s;
+}
+.serv-bottom li:hover{
+    -webkit-transition: background 1s;
+    -moz-transition: background 1s;
+    -ms-transition: background 1s;
+    -o-transition: background 1s;
+    transition: background 1s;
+}
+.serv-bottom li div{
+    transition: transform 1.5s;   /*��ת����*/
+}
+.serv-bottom li:hover div{
+    transform: rotate(360deg);  /**��תִ��**/
+    transition: all 0.5s;
+}
+.port-middle li:hover{
+    -webkit-transition: border 0.5s;
+    -moz-transition: border 0.5s;
+    -ms-transition: border 0.5s;
+    -o-transition: border 0.5s;
+    transition: border 0.5s;
+}
+.blog-bottom>ul>li:hover .blog-card{
+    transition: all 1s ease 0s;
+}
+.blog-bottom>ul>li:hover a{
+    transition: all 1s ease 0s;
+}
+
+.cont-right a:hover{
+    -webkit-transition: background 1s;
+    -moz-transition: background 1s;
+    -ms-transition: background 1s;
+    -o-transition: background 1s;
+    transition: background 1s;
+}
+
+/*���ܵĽ�����*/
+
+.skill-tab .skill-1{
+    display: block;
+    width: 90%;
+}
+.skill-tab .skill-11:hover .skill-1{
+    width: 90%;
+    animation: load1 1.5s;
+}
+@-webkit-keyframes load1{
+    0%{width: 0%;}
+    100%{width:90%;}
+}
+
+.skill-tab .skill-2{
+    display: block;
+    width: 85%;
+}
+.skill-tab .skill-12:hover .skill-2{
+    width: 85%;
+    animation: load1 1.5s;
+}
+@-webkit-keyframes load2{
+    0%{width: 0%;}
+    100%{width:85%;}
+}
+
+.skill-tab .skill-3{
+    display: block;
+    width: 75%;
+}
+.skill-tab .skill-13:hover .skill-3{
+    width: 75%;
+    animation: load1 1.5s;
+}
+@-webkit-keyframes load3{
+    0%{width: 0%;}
+    100%{width:75%;}
+}
+
+
+.skill-tab .skill-4{
+    display: block;
+    width: 70%;
+}
+.skill-tab .skill-14:hover .skill-4{
+    width: 70%;
+    animation: load1 1.5s;
+}
+@-webkit-keyframes load4{
+    0%{width: 0%;}
+    100%{width:70%;}
+}
+
+
+.skill-tab .skill-5{
+    display: block;
+    width: 85%;
+}
+.skill-tab .skill-15:hover .skill-5{
+    width: 85%;
+    animation: load1 1.5s;
+}
+@-webkit-keyframes load5{
+    0%{width: 0%;}
+    100%{width:85%;}
+}
+
+
