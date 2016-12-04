@@ -1,0 +1,291 @@
+/*通用样式*/
+body{
+    color:#6F7478;
+    font-family: "Microsoft YaHei", "Hiragino Sans GB";
+    font-size: 16px;
+    font-weight: 300;
+}
+#topnav,#main,#footer,#home,#listing,#agents,#gallery,#purpose,#news,#contact{
+    width: 100%;
+    float: left;
+}
+#main{
+    height:auto;
+}
+
+
+ /*** 一,topnav ***/
+.toptext{
+    font-size: 32px;
+}
+ /*** 二,main ***/
+/**** Home  *****/
+#home{
+    width: 100%;
+	background: url("../img/picjumbo-bg5.jpg") 0% 0% / 100% no-repeat fixed;
+    float: left;
+    background-size: cover;
+}
+.home-bg{
+    width:100%;
+    height:100%;
+    background-color: rgba(37, 35, 50,0.67);
+}
+.home-text{
+    color: #FFFFFF;
+    font-weight: 400;
+    padding :180px 0;
+    font-size: 65px;
+}
+.home-he{
+    font-size: 26px;
+    color: #FFFFFF;
+    padding-bottom:10px;
+}
+#main #home .row .home-se{
+    background-color: rgba(143, 165, 175,0.33);
+    padding: 25px 0;
+    border-radius: 5px;
+}
+.home-se .sellb{
+    height: 50px;
+    margin:8px 0;
+}
+.home-se .selsec{
+    height: 50px;
+    padding:0 10px;
+    border-radius: 5px;
+    width: 100%;
+    margin:8px 0;
+}
+.home-se .selbtn{
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: rgb(24, 25, 30);
+    color:#FFF;
+    margin:8px 0;
+}
+.home-fo{
+    margin-top:30px;
+    font-size: 22px;
+    color: #FFF;
+}
+
+/**** Listing  *****/
+#listing,#agents,#gallery,#news{
+    padding: 85px 0;
+}
+#listing .list-bg{
+    background-color: #FFF;
+}
+#listing .list-bg .list-title,
+#agents .agen-bg .agen-title,
+#gallery .gall-bg .gall-title,
+#news .news-bg .news-title,
+#purpose .purp-bg .purp-title,
+#contact .cont-bg .cont-title{
+    border-bottom: 5px solid #F84B4A;
+    margin-bottom: 50px;
+    display: inline-block;
+}
+#listing .list-img{
+    padding: 10px 0;
+    text-align: center;
+}
+#list-owl .item{
+    margin: 3px;
+    border: 2px solid #ddd;
+}
+#list-owl .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/**** agents  *****/
+#agents{
+    width: 100%;
+    height:auto;
+    background: url("../img/bg.jpg") no-repeat fixed;
+    background-size: cover;
+}
+.agen-title{
+    color:#fff;
+}
+.agen-img{
+    background-color: #fff;
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}
+.agent-social{
+    padding:0;
+    margin-top:30px;
+}
+.agent-social li {
+    display: inline-block;
+    padding:0 10px 0 0;
+    margin-bottom: 10px;
+}
+.agent-social li a {
+    color: #F84B4A;
+    font-size: 28px;
+}
+
+.gall-btn .gall-btn-a span {
+    width: 100%;
+    font-size: 20px;
+    padding: 15px;
+    margin: 0 1.5%;
+    text-align: center;
+    border: 1px solid #F84B4A;
+    background-color: #F84B4A;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+}
+.gall-btn .active{
+    background-color: transparent;
+    color: rgb(248, 75, 74);
+}
+.gall-btn{
+    margin-bottom:30px;
+}
+#Container .mix{
+    display: none;
+}
+.gall-all img {
+    width: 100%;
+    position: relative;
+}
+.gall-all .gall-img {
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.gall-all .gall-img .img-hover {
+    position: absolute;
+    bottom: 0;
+    background: rgba(248, 75, 74, 0.67) none repeat scroll 0% 0%;;
+    left: 15px;
+    right: 15px;
+    display: none;
+}
+.gall-all .gall-img:hover .img-hover {
+    display: block;
+}
+.gall-all .gall-img .img-hover h3 {
+    color: #FFF;
+    font-size: 16px;
+    padding: 15px;
+}
+.purp-text{
+    padding: 0 20px;
+    border-left: 3px solid #dddddd;
+}
+
+ /*** News ***/
+#news .new-text{
+    height:110px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    width:100%;
+}
+#news .new-main{
+    color: #fff;
+    background-color:#F84B4A ;
+    padding: 20px 15px;
+    margin-bottom: 20px;
+}
+#news .new-btn{
+    color: #F84B4A;
+    background-color:#fff ;
+}
+
+ /***  contact  ***/
+.cont-msg input {
+    width: 60%;
+}
+.cont-main{
+    width: 100%;
+    height:auto;
+}
+.cont-btn{
+    margin:20px 0;
+    background-color:#F84B4A;
+    color: #fff;
+}
+.cont-bg .row{
+    height:auto;
+    padding: 0 15px;
+    background-color: #eee;
+}
+.cont-msg{
+    margin: 15px 0;
+}
+ /*** footer ***/
+#footer{
+    float: left;
+    padding: 80px 0;
+}
+#footer>.row{
+    margin: 0;
+}
+.foot-icon{
+    padding:0;
+}
+.foot-icon li {
+    display: inline-block;
+}
+.foot-icon li a i {
+    color: #C1C0C0;
+    font-size: 30px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #E9E8E8;
+    border-radius: 3px;
+    transition: all 0.5s ease-in 0s;
+}
+#foot-icon1:hover {
+    background-color: #D1432F;
+    color: #fff;
+    transition: all 0.5s ease-in 0s;
+}
+#foot-icon2:hover {
+    background-color: #4161A2;
+    color: #fff;
+    transition: all 0.5s ease-in 0s;
+}
+#foot-icon3:hover {
+    background-color: #09AEEC;
+    color: #fff;
+    transition: all 0.5s ease-in 0s;
+}
+#footer{
+    padding: 85px 0 20px 0;
+}
+
+/***  不同设备尺寸  ***/
+
+@media (max-width: 768px) and (min-width: 350px){
+    .home-text{
+        padding :140px 0 100px 0;
+        font-size: 32px;
+    }
+    .agen-left img{
+        width: 100%;
+    }
+    .home-fo{
+        margin-top:30px;
+        font-size:18px;
+    }
+    .gall-btn .gall-btn-a span {
+        font-size: 14px;
+    }
+    .home-he{
+        font-size: 22px;
+    }
+}
