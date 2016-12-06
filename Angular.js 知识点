@@ -1,0 +1,45 @@
+# Angular.js 知识点
+// 1.什么是ng
+  ng是一个开源的数据网络应用框架，适用于单页面应用开发。
+  仅用于：以数据操作为主的SPA应用。
+// 2.ng四大特征
+  ①MVC  ②双向数据绑定 ③依赖注入  ④模块化设计
+// 3.语法
+  {{表达式}}
+  作用：执行表达式 并将结果输出
+// 4.使用步骤
+  ①引用angular.js
+  ②使用ng-app自动载入并启动ng应用
+  ③使用ng-init初始化数据
+  ④再view中显示数据，通过{{表达式}}
+//  5.MVC
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <script src="angular.js"></script>
+  </head>
+  <body>
+    <div ng-controller="myCtrl">
+      <ul>
+        <li ng-repeat="dish in dishList">
+          <img ng-src="img/{{dish.url}}">
+          <p>{{dish.name}}</p>
+          <p>{{dish.price}}</p>
+        </li>
+      </ul>
+    </div>
+    <button ng-click="add()">加载更多</button>
+    <script>
+      var app=angular.module("myApp",[]);
+      app.controller("myCtrl",function($scope){
+        $scope.dishList = [
+          {url:'1.jpg',name:'鱼香肉丝',price:10},
+          {url:'2.jpg',name:'小鱼炖蘑菇',price:15},
+          {url:'3.jpg',name:'鱼香茄子',price:21},
+        ];
+        $scope.add = function(){
+          $scope.addLish.push({url:'4.jpg',name:'清炒河鱼',price:16})
+        };
+      })
+    </script>
+  </body>
