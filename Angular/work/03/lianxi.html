@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>购物车练习</title>
+  <script src="js/angular.js"></script>
+</head>
+<body>
+
+<div ng-controller="MyCtrl">
+    <button ng-click="add()">添加数据</button>
+    <table>
+      <thead>
+        <tr>
+          <th>单价</th>
+          <th>数量</th>
+          <th>小计</th>
+          <th>删除</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="tmp in cart">
+          <td>{{tmp.price}}</td>
+          <td>{{tmp.count}}</td>
+          <td>{{tmp.price*tmp.count}}</td>
+          <td><button ng-click="delete($index)">删除</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>总计：{{sum() | currency:'￥'}}</p>
+</div>
+
+<script>
+  //完成模块的声明
+  var app = angular.module('MyApp',[]);
+
+  //完成控制器的声明
+  app.controller('MyCtrl', function ($scope,$http) {
+      $http.get('data/product.json')
+        .success(function (data) {
+          console.log(data);
+          $scope.cart = data;
+
+        })
+
+      $scope.delete = function (index) {
+        $scope.cart.splice(index,1);
+      }
+    
+      $scope.add = function () {
+        var obj = new Object();
+        obj.price = Math.floor(Math.random()*100);
+        obj.count = 2;
+        $scope.cart.push(obj);
+      }
+
+      $scope.sum = function () {
+        var totalNum = 0;
+        angular.forEach($scope.cart,
+          function (value,key) {
+            /*console.log(value);
+            console.log(key);*/
+            totalNum+=(value.price*value.count);
+        });
+        console.log(totalNum);
+        return totalNum;
+      }
+  });
+
+</script>
+</body>
+</html>

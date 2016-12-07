@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>控制器的作用范围对象$scope</title>
+  <script src="js/angular.js"></script>
+</head>
+<body>
+
+<div ng-controller="myCtrl01">
+    <p>{{school}}</p>
+</div>
+
+<hr/>
+
+<div ng-controller="myCtrl02">
+    <p>{{name}}</p>
+    <p>{{school}}</p>
+
+  <div ng-controller="myCtrl03">
+    <p>" myCtrl03 name is "{{name}}</p>
+  </div>
+
+</div>
+
+
+
+
+
+<script>
+  var app = angular.module('myApp',[]);
+
+  app.controller('myCtrl01', function ($scope,$rootScope) {
+      $rootScope.school = 'Tarena';
+      console.log($rootScope);
+      console.log($scope);
+  });
+
+  app.controller('myCtrl02', function ($scope) {
+      $scope.name = 'Lucy';
+      console.log($scope);
+  });
+  
+  app.controller('myCtrl03', function ($scope) {
+
+  });
+
+</script>
+</body>
+</html>

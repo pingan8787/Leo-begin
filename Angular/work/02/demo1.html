@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>方向1的数据绑定（模型数据到视图的绑定）</title>
+  <script src="js/angular.js"></script>
+</head>
+<body>
+
+<div ng-controller="myCtrl">
+  <p>{{num}}</p>
+  <button ng-click="add()">clickMe</button>
+</div>
+
+<script>
+  //模块的声明
+  var app = angular.module('myApp',[]);
+  //模块的调用
+
+  //控制器的声明
+  app.controller('myCtrl', function ($scope) {
+      $scope.num = 0;
+      //定义add方法，修改模型数据（num）
+      $scope.add = function () {
+        $scope.num++;
+      }
+  });
+
+  //控制器的调用
+</script>
+
+</body>
+</html>

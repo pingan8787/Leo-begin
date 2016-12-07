@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>方向1的练习</title>
+  <script src="js/angular.js"></script>
+</head>
+<body>
+
+<div ng-controller="myCtrl">
+  <p>{{name}}</p>
+  <button ng-click="modify()">修改</button>
+  <button ng-click="reset()">恢复</button>
+</div>
+
+<script>
+  var app = angular.module('myApp',[]-);
+  app.controller('myCtrl', function ($scope) {
+    $scope.name = 'Tom';
+    $scope.modify = function () {
+      $scope.name = 'Michael';
+    }
+
+    $scope.reset = function () {
+      $scope.name = 'Tom';
+    }
+
+  });
+
+</script>
+
+</body>
+</html>

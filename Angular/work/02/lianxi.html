@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>简单的购物车</title>
+  <script src='js/angular.js'></script>
+</head>
+<body>
+
+<div ng-controller="myCtrl">
+    <button ng-click="add()">添加</button>
+    <table>
+      <thead>
+        <tr>
+          <th>单价</th>
+          <th>数量</th>
+          <th>小计</th>
+          <th>删除</th>
+        </tr>
+      </thead>
+
+      <tbody>
+          <tr ng-repeat="tmp in cart">
+            <td>{{tmp.price}}</td>
+            <td>{{tmp.count}}</td>
+            <td>{{tmp.price*tmp.count}}</td>
+            <td>
+              <button ng-click="delete($index)">删除</button>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+</div>
+
+<!--1、引入angular文件-->
+<!--2、声明模块 module-->
+<!--3、注册myApp模块 ng-app -->
+<!--4、声明控制器  myCtrl-->
+<!--5、调用控制器 -->
+
+<script>
+    var app = angular.module('myApp',[]);
+
+    app.controller('myCtrl', function ($scope) {
+        //定义一个购物车
+        $scope.cart = [
+          {price:3,count:2},
+          {price:4,count:1}];
+
+        //定义添加功能
+        $scope.add = function () {
+          $scope.cart.push(
+            {price:Math.round(Math.random()*100),
+              count:1});
+        }
+
+        //定义删除某一行功能
+        $scope.delete = function (index) {
+          $scope.cart.splice(index,1);
+        }
+    });
+</script>
+
+
+</body>
+</html>

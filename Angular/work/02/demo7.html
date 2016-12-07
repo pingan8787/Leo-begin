@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>学习angular中提供的函数的使用</title>
+  <script src="js/angular.js"></script>
+</head>
+<body>
+
+<div ng-controller="myCtrl">
+
+</div>
+
+<script>
+
+  var app = angular.module('myApp',[]);
+  app.controller('myCtrl', function ($scope) {
+      //遍历数组的索引和值
+      var list = [10,20,30];
+      angular.forEach(list, function (value, key) {
+        console.log('value is '+value+" key is "+key);
+      });
+
+      //遍历对象的属性和值
+      var stu = {name:"lily",age:22,score:88};
+      angular.forEach(stu, function (value, key) {
+       console.log('object value is '+value+" key is "+key);
+      });
+
+      //大小写的转换
+      console.log(angular.uppercase('John'));
+      console.log(angular.lowercase('John'));
+
+      //json的序列化和反序列化
+      var jsonObj = {"name":"Lucy","age":20};
+      //序列化操作
+      var jsonStr = angular.toJson(jsonObj);
+      console.log("json字符串"+jsonStr);
+      //反序列化操作：将json字符串转换为json对象
+      console.log(angular.fromJson(jsonStr));
+  });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>MVC的学习</title>
+  <script src="js/angular.js"></script>
+</head>
+<body>
+
+<!--控制器的调用-->
+<div ng-controller="myCtrl">
+  <p>{{num}}</p>
+</div>
+
+
+<script>
+  //声明模块
+  var app = angular.module('myApp',[]);
+  //声明控制器
+  app.controller('myCtrl', function ($scope) {
+    console.log('it is a test!');
+    $scope.num = 10;//模型数据 ，存在$scope对象中。
+    console.log($scope);
+  });
+
+
+</script>
+</body>
+</html>

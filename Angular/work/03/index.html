@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="js/angular.js"></script>
+  <script src="js/angular-route.js"></script>
+</head>
+<body>
+<!--盛放代码片段-->
+<div ng-view>
+
+</div>
+
+<script>
+  var app = angular.module('myApp',['ng','ngRoute']);
+
+  app.controller('startCtrl',
+    ['$scope','$location',
+      function ($scope,$location) {
+      $scope.jump = function () {
+        $location.path('/login');
+      }
+  }]);
+
+  //配置路由词典
+  app.config(function ($routeProvider) {
+
+    $routeProvider
+      .when('/start',{
+        templateUrl:'tpl/start.html'
+      })
+      .when('/login',{
+        templateUrl:'tpl/login.html'
+      })
+      .when('/main',{
+        templateUrl:'tpl/main.html'
+      })
+      .otherwise({redirectTo:'/start'})
+
+  })
+
+</script>
+
+</body>
+</html>

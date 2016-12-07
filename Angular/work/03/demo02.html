@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>$interval的图片轮播的练习</title>
+  <script src="js/angular.js"></script>
+</head>
+<body>
+
+<div ng-controller="myCtrl">
+  <img ng-src="img/{{imgList[index]}}" />
+</div>
+
+<script>
+  var app = angular.module('myApp',[]);
+  app.controller('myCtrl',
+    function ($scope,$interval) {
+      $scope.imgList= ['1.jpg','2.jpg','3.jpg'];
+      $scope.index = 0;
+      id = $interval(function () {
+        $scope.index++;
+        if($scope.index == 3 )
+        {
+          $scope.index = 0;
+        }
+      },1000);
+
+    //$inerval.cancel(id);
+
+  });
+</script>
+
+</body>
+</html>

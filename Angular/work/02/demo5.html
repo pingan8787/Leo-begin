@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>过滤器的学习</title>
+  <script src="js/angular.js"></script>
+</head>
+<body>
+
+<div ng-controller="myCtrl">
+  <h1>货币格式化</h1>
+  <p>{{price}}</p>
+  <p>{{price | currency}}</p>
+  <p>{{price | currency:'￥'}}</p>
+
+  <h2>日期的格式化</h2>
+  <p>{{nowDate}}</p>
+  <p>{{nowDate | date:'yy-MM-dd'}}</p>
+
+  <h2>大小写的转换</h2>
+  <p>{{name | uppercase}}</p>
+  <p>{{name | lowercase}}</p>
+
+  <h2>orderBy过滤器的使用</h2>
+  <ul>
+    <li ng-repeat="tmp in list">
+      {{tmp.age}} {{tmp.name}}
+    </li>
+  </ul>
+
+  <ul>
+    <li ng-repeat=
+          "tmp in list | orderBy:'age':true">
+      {{tmp.age}} {{tmp.name}}
+    </li>
+  </ul>
+</div>
+
+<script>
+
+  var app = angular.module('myApp', []);
+
+  app.controller('myCtrl', function ($scope) {
+
+    $scope.price = 100;
+    $scope.nowDate = new Date();
+    $scope.name = 'John';
+    $scope.list = [
+      {age:20,name:'Michale'},
+      {age:25,name:'Jason'},
+      {age:18,name:'Sara'}
+    ];
+  });
+
+</script>
+
+</body>
+</html>

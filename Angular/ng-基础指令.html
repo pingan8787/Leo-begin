@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>angular练习1</title>
+    <script src="js/angular.js"></script>
+</head>
+<body>
+<div ng-app>
+    <ol>
+        <li>
+            <p>算术计算：</p>
+            <p>1、12+21={{12+21}}</p>
+            <p>2、12*21={{12*21}}</p>
+            <p>3、12/21={{12/21}}</p>
+            <p>4、12-21={{12-21}}</p>
+        </li>
+        <li>
+            <p>逻辑运算：</p>
+            <p>1、三目运算  3>2是：{{3>2 ? 'yes':'no'}}；代码： ｛｛3>2 ? 'yes':'no'｝｝ </p>
+            <p>2、比较运算  3>2是：{{3>2}}；代码：｛｛3>2｝｝ </p>
+            <p>3、逻辑运算  {{true && false}}；代码：｛｛true && false｝｝ </p>
+        </li>
+        <li>
+            <p>数据读取操作</p>
+            <ul>
+                <li>
+                    <p>1、读取对象中的属性</p>
+                    <p>对象为：leo={name:'leo',age:22,address:'HuiAn'}</p>
+                    <p>代码：｛｛leo.name｝｝</p>
+                    <span ng-init="leo={name:'leo',age:22,address:'HuiAn'}"></span>
+                    <p>读取name为：{{leo.name}}</p>
+                    <p>读取age为：{{leo.age}}</p>
+                    <p>读取address为：{{leo.address}}</p>
+                </li>
+                <li>
+                    <p>2、读取数组中的数据</p>
+                    <p>数组为：list=[10,20,30,40,50]</p>
+                    <p>代码：｛｛list[0]｝｝</p>
+                    <span ng-init="list=[10,20,30,40,50]"></span>
+                    <p>list数组[0]数值为：{{list[0]}}</p>
+                </li>
+                <li>
+                    <p>3、读取数组中所有对象的数据</p>
+                    <p>模拟数据:[{name:'lucy',sex:'man',math:80,chinese:100},{name:'lily',sex:'man',math:100,chinese:80},{name:'hanmeimei',sex:'man',math:90,chinese:50}]</p>
+                    <p>代码：｛｛stuList[0].name｝｝</p>
+                    <span ng-init="stuList=[{name:'lucy',sex:'man',math:80,chinese:100},{name:'lily',sex:'man',math:100,chinese:80},{name:'hanmeimei',sex:'man',math:90,chinese:50}]"></span>
+                    <table border="1px">
+                        <thead>
+                            <tr>
+                                <th>姓名</th>
+                                <th>性别</th>
+                                <th>数学</th>
+                                <th>语文</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{stuList[0].name}}</td>
+                                <td>{{stuList[0].sex}}</td>
+                                <td>{{stuList[0].math}}</td>
+                                <td>{{stuList[0].chinese}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{stuList[1].name}}</td>
+                                <td>{{stuList[1].sex}}</td>
+                                <td>{{stuList[1].math}}</td>
+                                <td>{{stuList[1].chinese}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{stuList[2].name}}</td>
+                                <td>{{stuList[2].sex}}</td>
+                                <td>{{stuList[2].math}}</td>
+                                <td>{{stuList[2].chinese}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <p>ng几个标签使用</p>
+            <ul>
+                <li>
+                    <p>1、ngInit 数据初始化</p>
+                    <p>ng-init="name='michael';age=19"</p>
+                    <p>代码：name is ｛｛name｝｝</p>
+                    <div ng-init="name='michael';age=19"></div>
+                    <p>name is {{name}}</p>
+                    <p>age is {{age}}</p>
+                </li>
+                <li>
+                    <p>2、ngBind 绑定</p>
+                    <p>代码：｛｛ng-bind="name"｝｝</p>
+                    <p ng-bind="name">Hello Test</p>
+                </li>
+                <li>
+                    <p>3、ngRepeat 循环遍历</p>
+                    <ul>
+                        <li>
+                            <p>1、读取数组</p>
+                            <p>ng-init="list=[10,30,44,29]";ng-repeat="tmp in list"</p>
+                            <p>代码：｛｛tmp｝｝</p>
+                            <p ng-init="list=[10,30,44,29]"></p>
+                            <ul>
+                                <li ng-repeat="tmp in list">
+                                    {{tmp}}
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>2、读取对象</p>
+                            <p>方法1：ng-init="car={name:'BMW',price:30}";ng-repeat="tmp in car"</p>
+                            <p>代码：｛｛tmp｝｝</p>
+                            <p ng-init="car={name:'BMW',price:30}"></p>
+                            <ul>
+                                <li ng-repeat="tmp in car">
+                                    {{tmp}}
+                                </li>
+                            </ul>
+                            <p>方法2：ng-repeat="(key,value) in car"</p>
+                            <p>代码：｛｛key｝｝｛｛value｝｝</p>
+                            <ol>
+                                <li ng-repeat="(key,value) in car">
+                                    {{key}} {{value}}
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>4、ngIf 判断</p>
+                    <p>ng-init="isMember=false"; ng-if="isMember"</p>
+                    <p>代码：｛｛会员专区：仅会员可见｝｝</p>
+                    <span ng-init="isMember=true"></span>
+                    <div ng-if="isMember">
+                        会员专区：仅会员可见
+                    </div>
+                </li>
+                <li>
+                    <p>5、循环遍历+条件判断 输出数组内容</p>
+                    <p> ng-repeat="tmp in stuList";ng-if="tmp.chinese > 60"</p>
+                    <p>代码：｛｛tmp.name｝｝｛｛tmp.sex｝｝｛｛tmp.math｝｝｛｛tmp.chinese｝｝</p>
+                    <table border="1px">
+                        <thead>
+                        <tr>
+                            <th>姓名</th>
+                            <th>性别</th>
+                            <th>数学成绩</th>
+                            <th>语文成绩</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="tmp in stuList"
+                            ng-if="tmp.chinese > 60">
+                            <td>{{tmp.name}}</td>
+                            <td>{{tmp.sex}}</td>
+                            <td>{{tmp.math}}</td>
+                            <td>{{tmp.chinese}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <hr/>
+</div>
+</body>
+</html>

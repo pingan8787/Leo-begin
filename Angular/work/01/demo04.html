@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html  ng-app>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>ngApp/ngInit的指令</title>
+  <script src="js/angular.js"></script>
+</head>
+<body>
+
+<div>
+  <p>{{3+2}}</p>
+</div>
+
+<p>{{3*2}}</p>
+
+<!--ngInit指令的使用-->
+<div ng-init="name='michael';age=19"></div>
+<p>name is {{name}}</p>
+<p>age is {{age}}</p>
+
+<!--ngBind指令的使用-->
+<p ng-bind="name">Hello Test</p>
+
+</body>
+</html>

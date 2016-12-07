@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>ng内置服务的调用</title>
+  <script src="js/angular.js"></script>
+</head>
+<body>
+
+<div ng-controller="myCtrl">
+    <p>{{url}}</p>
+    <button ng-click="get()">获取地址</button>
+</div>
+
+<script>
+  var app = angular.module('myApp',[]);
+  app.controller('myCtrl', function ($scope,$location) {
+      $scope.url = "";
+      $scope.get = function () {
+        $scope.url = $location.absUrl();
+      }
+  });
+</script>
+
+</body>
+</html>

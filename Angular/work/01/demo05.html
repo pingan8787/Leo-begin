@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>ngRepeat、ngIf</title>
+  <script src="js/angular.js"></script>
+</head>
+<body>
+
+<p ng-init="list=[10,30,44,29]"></p>
+<ul>
+  <li ng-repeat="tmp in list">
+    {{tmp}}
+  </li>
+</ul>
+
+<!--通过ngRepeat读取对象中的值-->
+<p ng-init="car={name:'BMW',price:30}"></p>
+<ul>
+  <li ng-repeat="tmp in car">
+    {{tmp}}
+  </li>
+</ul>
+
+<ol>
+  <li ng-repeat="(key,value) in car">
+    {{key}} {{value}}
+  </li>
+</ol>
+<span ng-init="isMember=false"></span>
+<div ng-if="isMember">
+  会员专区：仅会员可见
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>方向2：视图（表单组件）绑定到模型数据</title>
+  <script src="js/angular.js"></script>
+</head>
+<body>
+
+<div ng-controller="myCtrl">
+  <input type="text" ng-model="kw"/>
+  <br/>
+  <h2>留言本</h2>
+  <textarea ng-model="msg"></textarea>
+  <br/>
+  <h2>选择所在城市</h2>
+  <select ng-model="city">
+    <option value="bj">北京</option>
+    <option value="sh">上海</option>
+    <option value="gz">广州</option>
+  </select>
+
+  <h2>选择性别</h2>
+  男<input type="radio" value="male" ng-model="sex"/>
+  女<input type="radio" value="female" ng-model="sex"/>
+
+  <h2>复选框</h2>
+  <input type="checkbox" value="1" ng-model="from"/>
+</div>
+
+<script>
+    var app = angular.module('myApp',[]);
+    app.controller('myCtrl', function ($scope) {
+      $scope.kw = '';
+      $scope.$watch('kw', function () {
+        console.log('input is '+$scope.kw);
+      })
+
+      $scope.$watch('msg', function () {
+        console.log('user msg is '+$scope.msg);
+      })
+
+      $scope.$watch('city', function () {
+        console.log('user city is '+$scope.city);
+      })
+
+      $scope.$watch('sex', function () {
+        console.log('user sex is '+$scope.sex);
+      })
+
+      $scope.$watch('from', function () {
+        console.log('user from is '+$scope.from);
+      })
+
+
+
+
+
+    });
+</script>
+</body>
+</html>

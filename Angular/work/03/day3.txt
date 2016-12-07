@@ -1,0 +1,205 @@
+一、双向数据绑定的原理以及$apply $digest $interval $timeout的用法
+setTimeout
+
+demo: 定义一个模型数据 num = 0；将数据绑定视图p
+在定时器中，每隔1s 去完成num的自增
+
+1、双向数据绑定的原理的剖析
+
+①每一个数据绑定都会添加一个监听
+{{model}}  =》 model添加一个监听watch
+
+$scope.$watch('model',function(newValue,oldValue){
+
+})
+②当模型数据发生变化是，何时通知$watch对应的回调函数去更新视图？
+ng会周期性的运行一个函数，来检测数据是否发生了变化===》$digest()
+ng指令或者表单式，当数据发生变化时，都会通知$digest
+
+③何时手工调用$digest();
+$scope.$apply();==> $rootScope.$digest();
+建议使用$apply方法完成$digest的调用。
+
+练习：
+$interval 图片轮播
+每隔一秒，切一次图片。
+
+分析：
+准备三张图片，
+img ng-src
+
+
+二、依赖注入
+
+文件压缩：
+方法1： 通过命令行 
+java.exe -jar C:\yui-compressor.jar C:\demo03Js.js > C:\demo.min.js 
+方法2：图形化
+webStorm中左上角的File,点击，之后选中settings，在settings中找到tools，在tools中找到file watcher,点击右上角的加号，选中YUI-compressorJS,配置program（选中jar包）
+
+文件压缩：
+①删除所有的注释
+②删除没有语义的空白字符
+③尽可能的简化变量名、函数名、形参名 -- 混淆
+
+依赖注入：
+Driver（car）
+{	}
+每一个ng应用，都有一个注入器，负责查找和创建依赖注入的服务，可以借助注入器快速定位到需要的服务，在查找服务的时候，需要应用提供一些标记，根据标记方式的不同，划分3种不同的依赖注入方式：
+①推断式依赖注入
+自定义服务
+app.factory('服务名字',function(){
+	return{
+	  方法名：function（）{}，
+	  属性名：属性值
+	}
+});
+这种注入方式，不需要关注注入时参数的先后顺序，ng会根据参数查找对应的服务并注入进来，这种方式不能处理压缩或者混淆后的代码，只能处理原始的代码
+
+②标记式依赖注入
+如果需要进行标记式注入，可以直接调用$inject属性来完成（字符型的数组）
+
+自定义两个服务：
+一个服务（方法：弹窗）
+另一个服务（方法：控制台打印一句话）
+
+//依赖的标记
+var ctrFunc = function ($scope,$print,$show) {
+    $scope.callShow = function () {
+        $show.show();
+    }
+
+    $scope.callPrint = function () {
+        $print.print();
+    }
+};
+ctrFunc.$inject = ["$scope","$print","$show"];
+
+app.controller('myCtrl',ctrFunc);
+
+
+③行内式依赖注入
+所谓的行内式依赖注入，允许我们将一个字符数组作为对象的参数
+在这个数组中，除最后一个元素必须是函数体之外，其余都是注入的服务名称。
+
+app.controller('myCtrl',
+    ["$scope","$show", function ($scope,$show) {
+        $scope.callShow = function () {
+            $show.show();
+        }
+    }]);
+
+angular 在依赖注入时，注入器($injector),快速定位到需要注入的各种服务
+常用API：has方法和get方法
+
+$injector.has(name);从注册列表中查找对应的服务，如果找到返回true,否则返回false
+
+$injector.get(name) 返回指定名称的服务实例，获取到实例之后，调用服务中的属性和方法。
+
+创建一个服务，在控制器的回调函数中，尝试使用has方法判断服务是否可用，get拿到实例。
+
+如何得到注入器？
+var injector = angular.injector(['myApp','ng']);
+
+练习：
+定义一个服务，print：在控制台打印一句话
+放置一个按钮，点击按钮，通过get获取实例并调用print方法。
+
+可以通过注入$injector服务，代替angular.injector();
+
+angularJS四大特征：
+①采用MVC的设计模式
+②双向数据绑定
+③依赖注入
+④模块化设计
+
+三、模块化开发
+如何自定义模块并进行调用？
+
+ng的应用是支持存在多个模块（angular.module）,a模块如果要使用b模块的服务， 在a模块声明的时候，在依赖列表中写上对应的模块名字
+var app02 = angular.module('myApp02',['ng','myApp01']);
+
+面试题：一个ng模块 可以包含哪些组件？
+①controller：ng模块，多个控制器组件
+②directive：指令 view中绑定模型数据
+③service：服务 在不同的控制器之间提供某种函数服务
+④filter：过滤 筛选、格式化输出
+⑤function： forEach.toJson 序列化 反序列化
+。。。
+
+1、自定义指令
+
+用法：
+var app = angular.module('myApp',[]);
+app.directive('指令名称'，function);
+
+注意点1：
+规则：命名时候采用驼峰式命名(名字一般有两部分构成，前部分是前缀，采用项目名、公司名的缩写，后部分就是指令的作用)使用指令通过加上-的方式调用指令。
+
+ngInit  =》 ng-init
+
+注意点2：
+restrict 限制 值有4种，分别：
+
+E(Element)A(Attribute)C(Class)M(Comment)
+
+restrict:EA
+restrict:EAC
+
+2、自定义服务
+app.factory();
+app.service();
+const/value
+
+app.service(name,fn);
+
+factory与service方法的区别：factory是普通方法，service是一个够咱函数
+
+SPA（single page application）工作原理：
+1、url形式
+ http://127.0.0.1/index.html#/路由地址
+
+2、浏览器先去拿到index.html,再解析路由地址
+
+3、路由词典 
+#/start ==> tpl/start.html
+#/main ==> tpl/main.html
+
+4、获取到真实页面地址 ，发起请求，获取模板页面，插入到DOM树，实现刷新
+
+使用ngRoute来实现SPA应用的步骤：
+①创建一个完整的HTML页面，index.html
+引入angular.js angular-route.js
+②声明模块 
+angular.module('myApp',['ng','ngRoute']);
+③ngView
+在index.html中，使用ngView声明一个容器元素，盛放代码片段
+④创建模板页面
+⑤配置路由词典
+
+app.config(function($routeProvider){
+	$routeProvider.when('/路由地址',		{
+		  templateUrl:'模板页面地址'
+		}).otherwise({redirectTo:'/路由地址'})
+
+})
+
+如果要通过js的方式来跳转：
+$location.path('/start');
+超链接：
+<a href="#/start">返回起始页</a>
+
+每日一练：
+熟练掌握ngRoute的使用
+
+
+
+
+
+
+
+
+
+
+
+

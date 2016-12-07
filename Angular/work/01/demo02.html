@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>ng表达式的学习</title>
+  <script src="js/angular.js"></script>
+</head>
+<body>
+
+<div ng-app>
+
+  <!-- 算术运算-->
+  <h1>Hello {{3+5}}</h1>
+  <h1>Hello {{5-3}}</h1>
+  <h1>Hello {{3*5}}</h1>
+  <h1>Hello {{15/3}}</h1>
+
+  <!-- 比较运算-->
+  <p>{{3>2}}</p>
+
+  <!-- 逻辑运算-->
+  <p>{{true && false}}</p>
+
+  <!-- 三目运算-->
+  <p>{{ 3>2?'yes':'no'}}</p>
+
+  <!-- 读取对象中的属性-->
+  <span ng-init="car={name:'BMW',price:'30'}"></span>
+  <p>{{car.name}}</p>
+  <p>{{car}}</p>
+  <!-- 读取数组中的数据-->
+  <span ng-init="list=[10,20,30]"></span>
+  <p>{{list[0]}}</p>
+
+  <!-- 初始化数组-->
+
+  <!-- 构造table-->
+
+</div>
+
+
+</body>
+</html>

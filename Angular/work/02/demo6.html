@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>过滤器的练习</title>
+  <script src="js/angular.js"></script>
+</head>
+<body>
+
+<div ng-controller="myCtrl">
+  <h1>按照age降序排列</h1>
+  <ul>
+    <li ng-repeat="tmp in list | orderBy:'age':true">
+      {{tmp.age}} {{tmp.name}} {{tmp.score}}
+    </li>
+  </ul>
+
+  <h1>按照name增序排列</h1>
+  <ul>
+    <li ng-repeat="tmp in list | orderBy:'name'">
+      {{tmp.age}} {{tmp.name}} {{tmp.score}}
+    </li>
+  </ul>
+
+  <h1>按照score降序排列，只显示前三名</h1>
+  <ul>
+    <li ng-repeat=
+"tmp in list | orderBy:'score':true | limitTo:3">
+      {{tmp.age}} {{tmp.name}} {{tmp.score}}
+    </li>
+  </ul>
+
+
+</div>
+
+<script>
+
+  var app = angular.module('myApp', []);
+
+  app.controller('myCtrl', function ($scope) {
+    $scope.list = [
+      {age:20,name:'Michale',score:80},
+      {age:25,name:'Jason',score:100},
+      {age:18,name:'Sara',score:70},
+      {age:19,name:'Tbag',score:90},
+      {age:21,name:'Lincoln',score:75}
+    ];
+  });
+
+</script>
+
+</body>
+</html>

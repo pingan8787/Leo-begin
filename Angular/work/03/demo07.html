@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>$injector注入器常用的api</title>
+  <script src="js/angular.js"></script>
+</head>
+<body>
+
+<div ng-controller="myCtrl">
+  <button ng-click="callShow()">clickMe</button>
+</div>
+
+<script>
+  var app = angular.module('myApp',[]);
+
+  //自定义服务
+  app.factory('$custom', function () {
+      return{
+        show: function () {
+          alert('hello $injector');
+        }
+      }
+  });
+
+  //得到注入器对象
+  var injector = angular.injector(
+    ['myApp','ng']);
+  if(injector.has('$custom'))
+  {
+    console.log('$custom service 存在');
+    var custom = injector.get('$custom');
+    custom.show();
+  }
+
+  //行内式依赖注入
+  app.controller('myCtrl',
+    ['$scope',"$custom",
+      function ($scope,$custom) {
+        $scope.callShow = function () {
+          $custom.show();
+        }
+  }])
+</script>
+
+</body>
+</html>

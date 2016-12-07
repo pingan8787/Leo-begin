@@ -1,0 +1,60 @@
+一、双向数据绑定
+1、方向1：model数据绑定到view
+指令用于将模型数据绑定到view进行显示，一旦完成了绑定，模型数据被修改了，view也会更新。
+
+实现方法：
+① 方法1：{{model变量}}  
+②方法2：常用指令
+ngApp ngInit ngRepeat ngIf ngShow/Hide/disabled....
+
+
+练习：（增强方向1 模型数据到试图的绑定的认识）
+放置两个按钮，第一个按钮修改模型数据，第二个按钮恢复模型数据
+
+name = ‘Tom’
+p name
+第一个按钮 name===》‘Michael’
+第二个按钮 name===》‘Tom’
+
+2、方向2：view（表单组件）绑定模型数据
+
+唯一用法:
+	<ANY ng-model=‘’></ANY>
+
+ $scope.$watch('kw', function () {
+        console.log('input is '+$scope.kw);
+      })
+
+ng-model实现将视图中的数据绑定到$scope的模型数据中。
+除了input、多行文本textarea、下拉框select
+复选单选。
+
+练习：
+监听多行文本（留言本 textarea）、下拉框（所在城市 select）、复选框（方式 checkbox）、单选框（性别 radio）的用户输入或者选择。
+双向数据绑定的练习：
+①在select中选中某个选项，改变img所显示的图片
+②操作checkbox，改变按钮的是否允许被点击的状态
+分析：
+①select => ng-model 选择的数据保存到模型数据中；模型数据 ng-src 绑定到img
+②checkbox =》 ng-model 保存到模型数据中；模型数据 ng-disabled 绑定到button
+
+
+双向数据绑定
+方向1的绑定：通过{{}}或者ng指令，将模型数据绑定到view
+方向2的绑定：通过ng-model指令，将view操作结果绑定到模型数据中；
+
+
+二、过滤器
+过滤器：对表达式结果进行筛选、过滤或者格式化
+
+过滤器的语法：{{表达式 | filter:params | filter2：param }}
+
+'|' 管道：传递数据，可以将数据逐一传递，实现多重过滤
+
+
+
+
+
+
+
+三、ng中常用的函数和服务

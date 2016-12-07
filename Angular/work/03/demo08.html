@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>$injector注入的练习</title>
+  <script src="js/angular.js"></script>
+</head>
+<body>
+
+<div ng-controller="myCtrl">
+    <button ng-click="callPrint()">print</button>
+</div>
+
+<script>
+  var app = angular.module('myApp',[]);
+
+  app.factory('$custom', function () {
+    return {
+      print: function () {
+        console.log('Hello 注入器API');
+      }
+    }
+  });
+
+  app.controller('myCtrl',
+    ['$scope','$custom','$injector',
+      function ($scope,$custom,$injector) {
+        $scope.callPrint = function () {
+          var injector = $injector;//angular.injector(['myApp','ng']);
+          if(injector.has('$custom'))
+          {
+            var custom = injector.get('$custom');
+            custom.print();
+          }
+        }
+  }])
+</script>
+
+</body>
+</html>

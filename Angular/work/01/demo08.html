@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="js/angular.js"></script>
+</head>
+<body>
+
+<div ng-controller="myCtrl">
+  <ul>
+    <li ng-repeat="dish in list track by $index">
+      {{dish}}
+    </li>
+  </ul>
+
+  <button ng-click="add()">loadMore</button>
+
+</div>
+
+<script>
+  //声明模块 myApp
+  var app = angular.module('myApp',[]);
+
+  //声明控制器
+  app.controller('myCtrl', function ($scope) {
+      $scope.list = [10,20,30];
+      $scope.add = function () {
+        console.log('ready to add');
+        $scope.list.push(40);//Math.round(Math.random()*10));
+      }
+  });
+
+</script>
+
+</body>
+</html>
