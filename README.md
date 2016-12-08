@@ -6,4 +6,10 @@
 ```
  2.SB Admin 2后台管理系统模板 ：https://startbootstrap.com/template-overviews/sb-admin-2/
 ```
-##二、其他
+##二、CSS框架
+```
+ 1.jQuery过滤 分类 排序插件MixItUp  ： http://www.bootcdn.cn/mixitup/
+```
+```
+ 2.轮播图框架OWL Carousel   ： http://www.owlgraphic.com/owlcarousel/index.html
+```
