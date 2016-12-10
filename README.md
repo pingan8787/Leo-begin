@@ -15,3 +15,7 @@
 ```
 ```
  3.metisMenu导航插件 ： http://pan.baidu.com/s/1hs7by76 密码：nmww  官网http://mm.onokumus.com
+```
+```
+ 4.Font Awesome 一套绝佳的图标字体库和CSS框架   http://fontawesome.dashgame.com/
+```
