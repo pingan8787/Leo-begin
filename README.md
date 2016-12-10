@@ -13,3 +13,5 @@
 ```
  2.轮播图框架OWL Carousel   ： http://www.owlgraphic.com/owlcarousel/index.html
 ```
+```
+ 3.metisMenu导航插件 ： http://pan.baidu.com/s/1hs7by76 密码：nmww  官网http://mm.onokumus.com
