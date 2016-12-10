@@ -25,3 +25,6 @@
 ```
  5.animate.css  : http://www.bootcdn.cn/animate.css/
 ```
+```
+ 6.漂亮的弹框 layer.min.js ：http://layer.layui.com/
+```
