@@ -19,3 +19,6 @@
 ```
  4.Font Awesome 一套绝佳的图标字体库和CSS框架   http://fontawesome.dashgame.com/
 ```
+```
+ 5.animate.css  : http://www.bootcdn.cn/animate.css/
+```
