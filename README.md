@@ -1,5 +1,5 @@
 # 个人网页源码,保存资料。
-##一、网站
+## 一、网站
 ```
  1.二维码生成： jquery-qrcode: http://dwz.cn/4Lf6sH
 ```
@@ -12,7 +12,7 @@
 ```
  4.爬虫教学：https://github.com/moosen2012/pholcus
 ```
-##二、CSS框架
+## 二、CSS框架
 ```
  1.jQuery过滤 分类 排序插件MixItUp  ： http://www.bootcdn.cn/mixitup/
 ```
